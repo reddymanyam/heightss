@@ -24,7 +24,7 @@ const Dashboard = () => {
   return (
     <Stack flexDirection="row" sx={{ height: "100vh" }}>
       <Sidebar isSidebarOpen={isSidebarOpen || isSidebarPinned} isSidebarPinned={isSidebarPinned} handlePinToggle={handlePinToggle} />
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1, transition: "margin-left 0.6s ease", marginLeft: isSidebarPinned ? "0px" : "0px" }}>
         <Navbar handleToggleSideBar={handleToggleSideBar} isSidebarPinned={isSidebarPinned} />
         <Box sx={{ p: 3 }}>
           <Typography variant="h5" sx={{ color: "text.secondary" }}>

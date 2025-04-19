@@ -2,9 +2,9 @@ import { Box, Stack, Typography } from '@mui/material';
 import { Bell, ChevronLeft, ChevronRight, Ellipsis, Flag, Menu, Share } from 'lucide-react';
 import React from 'react'
 
-const Navbar = ({ handleToggleSideBar, isSidebarPinned }) => {
+const Navbar = ({ handleToggleSideBar }) => {
     return (
-        <Stack flexDirection="row" justifyContent="space-between" alignItems="center" padding="16px 24px" sx={{ backgroundColor: '#262626', zIndex: 1100, position: "sticky", top: 0, transition: "margin-left 0.6s ease" }} >
+        <Stack flexDirection="row" justifyContent="space-between" alignItems="center" padding="16px 24px" sx={{ backgroundColor: '#262626', zIndex: 1100, position: "sticky", top: 0 }} >
 
             <Stack flexDirection="row" alignItems="center" gap={2}>
                 <Menu size={16} color='white' style={{ cursor: "pointer" }} onClick={handleToggleSideBar} />
