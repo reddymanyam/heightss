@@ -5,7 +5,7 @@ import logo from '../../assets/heightslogo.png';
 
 const Sidebar = ({ isSidebarOpen, isSidebarPinned, handlePinToggle }) => {
   return (
-    <Stack gap={2} sx={{ position: isSidebarPinned ? 'relative' : 'fixed', top: 0, left: isSidebarOpen ? 0 : '-240px', width: "240px", overflow: "hidden", transition: 'left 0.5s ease', background: "#1f1f1f", zIndex: isSidebarPinned ? 1 : 1201, padding: "14px 20px", height: "100vh" }} >
+    <Stack gap={2} sx={{ position: 'fixed', top: 0, left: isSidebarOpen ? 0 : '-240px', width: "240px", overflow: "hidden", transition: 'left 0.6s ease', background: "#1f1f1f", zIndex: 1201, padding: "14px 20px", height: "100vh" }} >
       <Stack flexDirection="row" justifyContent="space-between" alignItems="center">
         <img src={logo} style={{ height: "28px" }} />
         <Stack flexDirection="row" gap={2} alignItems="center">

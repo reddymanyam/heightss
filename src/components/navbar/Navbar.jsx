@@ -2,14 +2,16 @@ import { Box, Stack, Typography } from '@mui/material';
 import { Bell, ChevronLeft, ChevronRight, Ellipsis, Flag, Menu, Share } from 'lucide-react';
 import React from 'react'
 
-const Navbar = ({ handleToggleSideBar }) => {
+const Navbar = ({ handleToggleSideBar, isSidebarPinned }) => {
     return (
         <Stack flexDirection="row" justifyContent="space-between" alignItems="center" padding="16px 24px" sx={{ backgroundColor: '#262626', zIndex: 1100, position: "sticky", top: 0 }} >
 
             <Stack flexDirection="row" alignItems="center" gap={2}>
+                {isSidebarPinned ? null : <Stack flexDirection="row" alignItems="center" gap={2}>
                 <Menu size={16} color='white' style={{ cursor: "pointer" }} onClick={handleToggleSideBar} />
                 <ChevronLeft size={14} color='white' />
                 <ChevronRight size={14} color='gray' />
+                </Stack>}
                 <Flag size={16} color="#a159ea" strokeWidth={2} />
                 <Typography variant='body2' sx={{ "color": "white" }}>Projects</Typography>
                 <Typography variant='body2' sx={{ "color": "gray" }}>Company</Typography>
