@@ -2,6 +2,7 @@ import { Stack, Box, Typography } from '@mui/material'
 import React, { useState } from 'react'
 import Sidebar from '../sidebar/Sidebar'
 import Navbar from '../navbar/Navbar'
+import TaskTable  from '../taskTable/TaskTable'
 
 const Dashboard = () => {
 
@@ -29,6 +30,7 @@ const Dashboard = () => {
         <Box sx={{ p: 3 }}>
           <Typography variant="h5" sx={{ color: "text.secondary" }}>
             Dashboard Content
+            {/* <TaskTable /> */}
           </Typography>
         </Box>
       </Box>
