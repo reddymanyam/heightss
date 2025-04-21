@@ -5,7 +5,7 @@ import Dashboard from './components/dashboard/Dashboard';
 
 function App() {
   return (
-    <Router>
+    <Router basename='/heightss'>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/dashboard" element={<Dashboard />} />
