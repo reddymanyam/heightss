@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Stack, Box, Typography } from '@mui/material';
 import Sidebar from '../sidebar/Sidebar';
 import Navbar from '../navbar/Navbar';
+import TaskTable from '../taskTable/TaskTable'
 
 const Dashboard = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -40,7 +41,7 @@ const Dashboard = () => {
   }, [isSidebarOpen, isSidebarPinned]);
 
   return (
-    <Stack flexDirection="row" sx={{ height: "100vh" }}>
+    <Stack flexDirection="row" sx={{ height: "100vh", overflow: "hidden" }}>
       <Sidebar
         ref={sidebarRef}
         isSidebarOpen={isSidebarOpen || isSidebarPinned}
@@ -50,6 +51,7 @@ const Dashboard = () => {
       <Box
         sx={{
           flexGrow: 1,
+          width: isSidebarPinned ? "calc(100% - 240px)" : "100%",
           transition: "margin-left 0.6s ease",
           marginLeft: isSidebarPinned ? "240px" : "0px",
           backgroundColor: "#f5f5f5",
@@ -57,10 +59,9 @@ const Dashboard = () => {
         }}
       >
         <Navbar handleToggleSideBar={handleToggleSideBar} isSidebarPinned={isSidebarPinned} />
-        <Box sx={{ p: 3 }}>
-          <Typography variant="h5" sx={{ color: "text.secondary" }}>
-            Dashboard Content
-          </Typography>
+        <Box sx={{ p: "24px 8px 8px 32px",  }}>
+          <Typography variant="h5" sx={{ color: "text.secondary" }}>Dashboard Content</Typography>
+          {/* <TaskTable /> */}
         </Box>
       </Box>
     </Stack>
