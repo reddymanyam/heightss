@@ -4,7 +4,7 @@ import Paper from '@mui/material/Paper';
 
 const columns = [
   { field: 'id', headerName: 'ID', width: 70, editable: false },
-  { field: 'task', headerName: 'Task', width: 250, editable: true },
+  { field: 'task', headerName: 'Task', width: 170, editable: true },
   { field: 'startdate', headerName: 'Start Date', width: 130, editable: true },
   { field: 'duedate', headerName: 'Due Date', width: 130, editable: true },
   { field: 'status', headerName: 'Status', width: 130, editable: true },
@@ -41,7 +41,7 @@ export default function TaskTable() {
   };
 
   return (
-    <Paper sx={{ width: "100%", height: "88vh" }}>
+    <Paper sx={{ maxWidth:"1400px", height: "88vh" }}>
       <DataGrid
         rows={rowsData}
         columns={columns}

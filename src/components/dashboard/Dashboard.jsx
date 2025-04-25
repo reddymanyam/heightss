@@ -60,8 +60,8 @@ const Dashboard = () => {
       >
         <Navbar handleToggleSideBar={handleToggleSideBar} isSidebarPinned={isSidebarPinned} />
         <Box sx={{ p: "24px 8px 8px 32px",  }}>
-          <Typography variant="h5" sx={{ color: "text.secondary" }}>Dashboard Content</Typography>
-          {/* <TaskTable /> */}
+          {/* <Typography variant="h5" sx={{ color: "text.secondary" }}>Dashboard Content</Typography> */}
+          <TaskTable />
         </Box>
       </Box>
     </Stack>
